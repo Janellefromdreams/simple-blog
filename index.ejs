@@ -1,0 +1,25 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <ul>
+        <% blogs.forEach(blog => { %>
+            <li>
+                <h2><%= blog.title %></h2>
+                <p><%= blog.body %></p>
+                <p><strong>Author:</strong> <%= blog.author %></p>
+                <p><strong>Date:</strong> <%= new Date(blog.createdAt).toLocaleString() %></p>
+            </li>
+        <% }); %>
+    </ul>
+    
+</body>
+</html>
+
+
+
